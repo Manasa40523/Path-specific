@@ -11,8 +11,9 @@ for k = 1:length(modelFiles)
  % Load the model    
 load_system(modelName); 
 
-% open_system(modelName);  
-set_param(modelName, 'SystemTargetFile', 'ert.tlc');  
+% open_system(modelName); 
+% set parameters
+set_param(modelName, 'SystemTargetFile', 'ert.tlc'); 
 set_param(modelName, 'Toolchain', 'MinGW64 | gmake (64-bit Windows)');  
 set_param(modelName, 'Solver', 'FixedStepDiscrete');  
 set_param(modelName, 'FixedStep', '0.1');  
